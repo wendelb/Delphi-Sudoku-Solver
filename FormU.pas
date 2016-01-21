@@ -90,6 +90,8 @@ type
     Edt97: TEdit;
     Edt98: TEdit;
     Edt99: TEdit;
+    procedure FormCreate(Sender: TObject);
+    procedure BtnStartClick(Sender: TObject);
   private
     { Private-Deklarationen }
   public
@@ -102,5 +104,43 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TFrmSudokuSolver.BtnStartClick(Sender: TObject);
+begin
+//.. start solving
+end;
+
+procedure TFrmSudokuSolver.FormCreate(Sender: TObject);
+{$IFDEF DEBUG}
+var
+  board: array[1..9] of string[9];
+  x, y: Integer;
+{$ENDIF}
+
+begin
+
+{$IFDEF DEBUG}
+  // In Case of Debug, initialize with a sample Sudoku
+  board[1] := '8x945x3x2';
+  board[2] := '35xx7xxxx';
+  board[3] := 'xxxxxxx46';
+  board[4] := 'xxxxxx4x9';
+  board[5] := '5x76148x3';
+  board[6] := '6x8xxxxxx';
+  board[7] := '27xxxxxxx';
+  board[8] := 'xxxx9xx81';
+  board[9] := '9x6x432x7';
+
+  for x := 1 to 9 do
+  begin
+    for y := 1 to 9 do
+    begin
+      if board[x][y] <> 'x' then
+        (FindComponent('Edt' + IntToStr(x) + IntToStr(y)) as TEdit).Text := board[x][y];
+    end;
+  end;
+{$ENDIF}
+
+end;
 
 end.

@@ -13,6 +13,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
   Font.Style = []
   OldCreateOrder = False
   ScreenSnap = True
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object BtnStart: TButton
@@ -22,12 +23,14 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Height = 25
     Caption = 'L'#246'sen'
     TabOrder = 0
+    OnClick = BtnStartClick
   end
   object Edt11: TEdit
     Left = 8
     Top = 8
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 1
@@ -37,6 +40,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 8
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 2
@@ -46,6 +50,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 8
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 3
@@ -55,6 +60,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 8
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 4
@@ -64,6 +70,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 8
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 5
@@ -73,6 +80,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 8
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 6
@@ -82,6 +90,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 8
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 7
@@ -91,6 +100,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 8
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 8
@@ -100,6 +110,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 8
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 9
@@ -109,6 +120,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 35
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 10
@@ -118,6 +130,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 35
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 11
@@ -127,6 +140,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 35
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 12
@@ -136,6 +150,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 35
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 13
@@ -145,6 +160,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 35
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 14
@@ -154,6 +170,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 35
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 15
@@ -163,6 +180,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 35
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 16
@@ -172,6 +190,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 35
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 17
@@ -181,6 +200,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 35
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 18
@@ -190,6 +210,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 62
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 19
@@ -199,6 +220,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 62
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 20
@@ -208,6 +230,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 62
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 21
@@ -217,6 +240,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 62
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 22
@@ -226,6 +250,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 62
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 23
@@ -235,6 +260,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 62
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 24
@@ -244,6 +270,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 62
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 25
@@ -253,6 +280,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 62
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 26
@@ -262,6 +290,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 62
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 27
@@ -271,6 +300,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 104
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 28
@@ -280,6 +310,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 104
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 29
@@ -289,6 +320,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 104
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 30
@@ -298,6 +330,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 104
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 31
@@ -307,6 +340,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 104
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 32
@@ -316,6 +350,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 104
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 33
@@ -325,6 +360,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 104
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 34
@@ -334,6 +370,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 104
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 35
@@ -343,6 +380,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 104
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 36
@@ -352,6 +390,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 131
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 37
@@ -361,6 +400,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 131
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 38
@@ -370,6 +410,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 131
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 39
@@ -379,6 +420,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 131
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 40
@@ -388,6 +430,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 131
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 41
@@ -397,6 +440,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 131
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 42
@@ -406,6 +450,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 131
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 43
@@ -415,6 +460,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 131
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 44
@@ -424,6 +470,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 131
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 45
@@ -433,6 +480,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 158
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 46
@@ -442,6 +490,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 158
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 47
@@ -451,6 +500,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 158
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 48
@@ -460,6 +510,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 158
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 49
@@ -469,6 +520,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 158
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 50
@@ -478,6 +530,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 158
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 51
@@ -487,6 +540,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 158
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 52
@@ -496,6 +550,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 158
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 53
@@ -505,6 +560,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 158
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 54
@@ -514,6 +570,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 200
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 55
@@ -523,6 +580,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 200
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 56
@@ -532,6 +590,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 200
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 57
@@ -541,6 +600,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 200
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 58
@@ -550,6 +610,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 200
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 59
@@ -559,6 +620,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 200
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 60
@@ -568,6 +630,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 200
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 61
@@ -577,6 +640,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 200
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 62
@@ -586,6 +650,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 200
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 63
@@ -595,6 +660,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 227
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 64
@@ -604,6 +670,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 227
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 65
@@ -613,6 +680,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 227
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 66
@@ -622,6 +690,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 227
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 67
@@ -631,6 +700,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 227
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 68
@@ -640,6 +710,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 227
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 69
@@ -649,6 +720,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 227
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 70
@@ -658,6 +730,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 227
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 71
@@ -667,6 +740,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 227
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 72
@@ -676,6 +750,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 254
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 73
@@ -685,6 +760,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 254
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 74
@@ -694,6 +770,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 254
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 75
@@ -703,6 +780,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 254
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 76
@@ -712,6 +790,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 254
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 77
@@ -721,6 +800,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 254
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 78
@@ -730,6 +810,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 254
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 79
@@ -739,6 +820,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 254
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 80
@@ -748,6 +830,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     Top = 254
     Width = 21
     Height = 21
+    Alignment = taCenter
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 81
