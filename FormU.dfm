@@ -34,6 +34,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 1
+    OnKeyDown = EditKeyDown
   end
   object Edt12: TEdit
     Left = 35
@@ -44,6 +45,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 2
+    OnKeyDown = EditKeyDown
   end
   object Edt13: TEdit
     Left = 62
@@ -54,6 +56,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 3
+    OnKeyDown = EditKeyDown
   end
   object Edt14: TEdit
     Left = 104
@@ -64,6 +67,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 4
+    OnKeyDown = EditKeyDown
   end
   object Edt15: TEdit
     Left = 131
@@ -74,6 +78,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 5
+    OnKeyDown = EditKeyDown
   end
   object Edt16: TEdit
     Left = 158
@@ -84,6 +89,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 6
+    OnKeyDown = EditKeyDown
   end
   object Edt17: TEdit
     Left = 200
@@ -94,6 +100,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 7
+    OnKeyDown = EditKeyDown
   end
   object Edt18: TEdit
     Left = 227
@@ -104,6 +111,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 8
+    OnKeyDown = EditKeyDown
   end
   object Edt19: TEdit
     Left = 254
@@ -114,6 +122,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 9
+    OnKeyDown = EditKeyDown
   end
   object Edt21: TEdit
     Left = 8
@@ -124,6 +133,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 10
+    OnKeyDown = EditKeyDown
   end
   object Edt22: TEdit
     Left = 35
@@ -134,6 +144,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 11
+    OnKeyDown = EditKeyDown
   end
   object Edt23: TEdit
     Left = 62
@@ -144,6 +155,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 12
+    OnKeyDown = EditKeyDown
   end
   object Edt24: TEdit
     Left = 104
@@ -154,6 +166,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 13
+    OnKeyDown = EditKeyDown
   end
   object Edt25: TEdit
     Left = 131
@@ -164,6 +177,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 14
+    OnKeyDown = EditKeyDown
   end
   object Edt26: TEdit
     Left = 158
@@ -174,6 +188,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 15
+    OnKeyDown = EditKeyDown
   end
   object Edt27: TEdit
     Left = 200
@@ -184,6 +199,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 16
+    OnKeyDown = EditKeyDown
   end
   object Edt28: TEdit
     Left = 227
@@ -194,6 +210,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 17
+    OnKeyDown = EditKeyDown
   end
   object Edt29: TEdit
     Left = 254
@@ -204,6 +221,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 18
+    OnKeyDown = EditKeyDown
   end
   object Edt31: TEdit
     Left = 8
@@ -214,6 +232,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 19
+    OnKeyDown = EditKeyDown
   end
   object Edt32: TEdit
     Left = 35
@@ -224,6 +243,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 20
+    OnKeyDown = EditKeyDown
   end
   object Edt33: TEdit
     Left = 62
@@ -234,6 +254,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 21
+    OnKeyDown = EditKeyDown
   end
   object Edt34: TEdit
     Left = 104
@@ -244,6 +265,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 22
+    OnKeyDown = EditKeyDown
   end
   object Edt35: TEdit
     Left = 131
@@ -254,6 +276,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 23
+    OnKeyDown = EditKeyDown
   end
   object Edt36: TEdit
     Left = 158
@@ -264,6 +287,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 24
+    OnKeyDown = EditKeyDown
   end
   object Edt37: TEdit
     Left = 200
@@ -274,6 +298,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 25
+    OnKeyDown = EditKeyDown
   end
   object Edt38: TEdit
     Left = 227
@@ -284,6 +309,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 26
+    OnKeyDown = EditKeyDown
   end
   object Edt39: TEdit
     Left = 254
@@ -294,6 +320,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 27
+    OnKeyDown = EditKeyDown
   end
   object Edt41: TEdit
     Left = 8
@@ -304,6 +331,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 28
+    OnKeyDown = EditKeyDown
   end
   object Edt42: TEdit
     Left = 35
@@ -314,6 +342,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 29
+    OnKeyDown = EditKeyDown
   end
   object Edt43: TEdit
     Left = 62
@@ -324,6 +353,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 30
+    OnKeyDown = EditKeyDown
   end
   object Edt44: TEdit
     Left = 104
@@ -334,6 +364,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 31
+    OnKeyDown = EditKeyDown
   end
   object Edt45: TEdit
     Left = 131
@@ -344,6 +375,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 32
+    OnKeyDown = EditKeyDown
   end
   object Edt46: TEdit
     Left = 158
@@ -354,6 +386,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 33
+    OnKeyDown = EditKeyDown
   end
   object Edt47: TEdit
     Left = 200
@@ -364,6 +397,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 34
+    OnKeyDown = EditKeyDown
   end
   object Edt48: TEdit
     Left = 227
@@ -374,6 +408,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 35
+    OnKeyDown = EditKeyDown
   end
   object Edt49: TEdit
     Left = 254
@@ -384,6 +419,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 36
+    OnKeyDown = EditKeyDown
   end
   object Edt51: TEdit
     Left = 8
@@ -394,6 +430,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 37
+    OnKeyDown = EditKeyDown
   end
   object Edt52: TEdit
     Left = 35
@@ -404,6 +441,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 38
+    OnKeyDown = EditKeyDown
   end
   object Edt53: TEdit
     Left = 62
@@ -414,6 +452,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 39
+    OnKeyDown = EditKeyDown
   end
   object Edt54: TEdit
     Left = 104
@@ -424,6 +463,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 40
+    OnKeyDown = EditKeyDown
   end
   object Edt55: TEdit
     Left = 131
@@ -434,6 +474,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 41
+    OnKeyDown = EditKeyDown
   end
   object Edt56: TEdit
     Left = 158
@@ -444,6 +485,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 42
+    OnKeyDown = EditKeyDown
   end
   object Edt57: TEdit
     Left = 200
@@ -454,6 +496,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 43
+    OnKeyDown = EditKeyDown
   end
   object Edt58: TEdit
     Left = 227
@@ -464,6 +507,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 44
+    OnKeyDown = EditKeyDown
   end
   object Edt59: TEdit
     Left = 254
@@ -474,6 +518,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 45
+    OnKeyDown = EditKeyDown
   end
   object Edt61: TEdit
     Left = 8
@@ -484,6 +529,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 46
+    OnKeyDown = EditKeyDown
   end
   object Edt62: TEdit
     Left = 35
@@ -494,6 +540,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 47
+    OnKeyDown = EditKeyDown
   end
   object Edt63: TEdit
     Left = 62
@@ -504,6 +551,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 48
+    OnKeyDown = EditKeyDown
   end
   object Edt64: TEdit
     Left = 104
@@ -514,6 +562,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 49
+    OnKeyDown = EditKeyDown
   end
   object Edt65: TEdit
     Left = 131
@@ -524,6 +573,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 50
+    OnKeyDown = EditKeyDown
   end
   object Edt66: TEdit
     Left = 158
@@ -534,6 +584,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 51
+    OnKeyDown = EditKeyDown
   end
   object Edt67: TEdit
     Left = 200
@@ -544,6 +595,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 52
+    OnKeyDown = EditKeyDown
   end
   object Edt68: TEdit
     Left = 227
@@ -554,6 +606,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 53
+    OnKeyDown = EditKeyDown
   end
   object Edt69: TEdit
     Left = 254
@@ -564,6 +617,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 54
+    OnKeyDown = EditKeyDown
   end
   object Edt71: TEdit
     Left = 8
@@ -574,6 +628,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 55
+    OnKeyDown = EditKeyDown
   end
   object Edt72: TEdit
     Left = 35
@@ -584,6 +639,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 56
+    OnKeyDown = EditKeyDown
   end
   object Edt73: TEdit
     Left = 62
@@ -594,6 +650,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 57
+    OnKeyDown = EditKeyDown
   end
   object Edt74: TEdit
     Left = 104
@@ -604,6 +661,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 58
+    OnKeyDown = EditKeyDown
   end
   object Edt75: TEdit
     Left = 131
@@ -614,6 +672,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 59
+    OnKeyDown = EditKeyDown
   end
   object Edt76: TEdit
     Left = 158
@@ -624,6 +683,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 60
+    OnKeyDown = EditKeyDown
   end
   object Edt77: TEdit
     Left = 200
@@ -634,6 +694,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 61
+    OnKeyDown = EditKeyDown
   end
   object Edt78: TEdit
     Left = 227
@@ -644,6 +705,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 62
+    OnKeyDown = EditKeyDown
   end
   object Edt79: TEdit
     Left = 254
@@ -654,6 +716,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 63
+    OnKeyDown = EditKeyDown
   end
   object Edt81: TEdit
     Left = 8
@@ -664,6 +727,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 64
+    OnKeyDown = EditKeyDown
   end
   object Edt82: TEdit
     Left = 35
@@ -674,6 +738,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 65
+    OnKeyDown = EditKeyDown
   end
   object Edt83: TEdit
     Left = 62
@@ -684,6 +749,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 66
+    OnKeyDown = EditKeyDown
   end
   object Edt84: TEdit
     Left = 104
@@ -694,6 +760,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 67
+    OnKeyDown = EditKeyDown
   end
   object Edt85: TEdit
     Left = 131
@@ -704,6 +771,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 68
+    OnKeyDown = EditKeyDown
   end
   object Edt86: TEdit
     Left = 158
@@ -714,6 +782,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 69
+    OnKeyDown = EditKeyDown
   end
   object Edt87: TEdit
     Left = 200
@@ -724,6 +793,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 70
+    OnKeyDown = EditKeyDown
   end
   object Edt88: TEdit
     Left = 227
@@ -734,6 +804,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 71
+    OnKeyDown = EditKeyDown
   end
   object Edt89: TEdit
     Left = 254
@@ -744,6 +815,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 72
+    OnKeyDown = EditKeyDown
   end
   object Edt91: TEdit
     Left = 8
@@ -754,6 +826,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 73
+    OnKeyDown = EditKeyDown
   end
   object Edt92: TEdit
     Left = 35
@@ -764,6 +837,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 74
+    OnKeyDown = EditKeyDown
   end
   object Edt93: TEdit
     Left = 62
@@ -774,6 +848,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 75
+    OnKeyDown = EditKeyDown
   end
   object Edt94: TEdit
     Left = 104
@@ -784,6 +859,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 76
+    OnKeyDown = EditKeyDown
   end
   object Edt95: TEdit
     Left = 131
@@ -794,6 +870,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 77
+    OnKeyDown = EditKeyDown
   end
   object Edt96: TEdit
     Left = 158
@@ -804,6 +881,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 78
+    OnKeyDown = EditKeyDown
   end
   object Edt97: TEdit
     Left = 200
@@ -814,6 +892,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 79
+    OnKeyDown = EditKeyDown
   end
   object Edt98: TEdit
     Left = 227
@@ -824,6 +903,7 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 80
+    OnKeyDown = EditKeyDown
   end
   object Edt99: TEdit
     Left = 254
@@ -834,5 +914,6 @@ object FrmSudokuSolver: TFrmSudokuSolver
     MaxLength = 1
     NumbersOnly = True
     TabOrder = 81
+    OnKeyDown = EditKeyDown
   end
 end

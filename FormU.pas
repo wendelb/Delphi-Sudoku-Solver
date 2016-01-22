@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Math;
 
 type
   TFrmSudokuSolver = class(TForm)
@@ -92,6 +92,7 @@ type
     Edt99: TEdit;
     procedure FormCreate(Sender: TObject);
     procedure BtnStartClick(Sender: TObject);
+    procedure EditKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private-Deklarationen }
   public
@@ -108,6 +109,46 @@ implementation
 procedure TFrmSudokuSolver.BtnStartClick(Sender: TObject);
 begin
 //.. start solving
+end;
+
+procedure TFrmSudokuSolver.EditKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+var
+  Edit: TEdit;
+  x, y: Integer;
+begin
+  // This will only work for edits
+  if not (Sender is TEdit) then
+  begin
+    Exit;
+  end;
+
+  // No modifier allowed
+  if Shift <> [] then
+  begin
+    Exit;
+  end;
+
+  // We checked earlier, hard-casting is therefore allowed
+  Edit := TEdit(Sender);
+  x := StrToInt(Copy(Edit.Name, 4, 1));
+  y := StrToInt(Copy(Edit.Name, 5, 1));
+
+  case Key of
+    VK_DOWN:  x := x + 1;
+    VK_UP:    x := x - 1;
+    VK_RIGHT: y := y + 1;
+    VK_LEFT:  y := y - 1;
+  else
+    // We only want the arrow keys
+    Exit;
+  end;
+
+  // Check boundaries
+  x := Min(Max(x, 1), 9);
+  y := Min(Max(y, 1), 9);
+
+  (FindComponent(Format('Edt%d%d', [x, y])) as TEdit).SetFocus;
 end;
 
 procedure TFrmSudokuSolver.FormCreate(Sender: TObject);
