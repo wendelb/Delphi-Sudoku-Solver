@@ -4,9 +4,13 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Math;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Math, System.Generics.Collections;
 
 type
+  TBoard = array[1..9] of array[1..9] of Byte;
+  TPointList = TList<TPoint>;
+  TAllowedDigits = set of 1..9;
+
   TFrmSudokuSolver = class(TForm)
     BtnStart: TButton;
     Edt11: TEdit;
@@ -94,6 +98,22 @@ type
     procedure BtnStartClick(Sender: TObject);
     procedure EditKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
+    function ReadBoard(): TBoard;
+    procedure WriteBoard(board: TBoard);
+
+    function GetValidDigits(board: TBoard; x, y: Integer): TAllowedDigits;
+    function GetDigitsInRow(board: TBoard; row: Integer): TAllowedDigits;
+    function GetDigitsInColumn(board: TBoard; col: Integer): TAllowedDigits;
+
+    function GetDigitsInBlock(board: TBoard; block: Integer): TAllowedDigits;
+    function GetBlockCoords(block: Integer): TPointList;
+    function GetBlock(x, y: Integer): Integer;
+
+    function GetFreePositions(board: TBoard): TPointList;
+    function SolveBacktrack(board: TBoard; freePositions: TPointList): boolean;
+
+    function heuristic(board: TBoard; freePositions: TPointList): TPoint;
+
     { Private-Deklarationen }
   public
     { Public-Deklarationen }
@@ -107,8 +127,17 @@ implementation
 {$R *.dfm}
 
 procedure TFrmSudokuSolver.BtnStartClick(Sender: TObject);
+var
+  board: TBoard;
+  freePositions: TPointList;
+  msg: String;
+  item: TPoint;
 begin
-//.. start solving
+  board := ReadBoard;
+
+  // start solving
+  freePositions := GetFreePositions(board);
+  SolveBacktrack(board, freePositions);
 end;
 
 procedure TFrmSudokuSolver.EditKeyDown(Sender: TObject; var Key: Word;
@@ -181,7 +210,220 @@ begin
     end;
   end;
 {$ENDIF}
+end;
 
+function TFrmSudokuSolver.GetBlock(x, y: Integer): Integer;
+begin
+  // Compute in which block the given coords lie
+  // Index: 1
+  Result := 3 * ((x - 1) div 3) + ((y - 1) div 3) + 1;
+end;
+
+function TFrmSudokuSolver.GetBlockCoords(block: Integer): TPointList;
+var
+  startRow, startCol: Integer;
+  x, y: Integer;
+begin
+  Result := TPointList.Create;
+
+  startRow := 3 * ((block - 1) div 3) + 1;
+  startCol := 3 * ((block - 1) mod 3) + 1;
+
+  for x := startRow to startRow + 2 do
+      for y := startCol to startCol + 2 do
+        Result.Add(Point(x, y));
+
+end;
+
+function TFrmSudokuSolver.GetDigitsInBlock(board: TBoard;
+  block: Integer): TAllowedDigits;
+var
+  points: TPointList;
+  point: TPoint;
+begin
+  Result := [];
+  points := GetBlockCoords(block);
+
+  for point in points do
+  begin
+    if board[point.X][point.Y] <> 0 then
+    begin
+      Result := Result + [board[point.X][point.Y]];
+    end;
+  end;
+
+  points.Free;
+end;
+
+function TFrmSudokuSolver.GetDigitsInColumn(board: TBoard;
+  col: Integer): TAllowedDigits;
+var
+  i: Integer;
+begin
+  Result := [];
+  for i := 1 to 9 do
+  begin
+    if board[i][col] <> 0 then
+    begin
+      Result := Result + [board[i][col]];
+    end;
+  end;
+end;
+
+function TFrmSudokuSolver.GetDigitsInRow(board: TBoard;
+  row: Integer): TAllowedDigits;
+var
+  i: Integer;
+begin
+  Result := [];
+  for i := 1 to 9 do
+  begin
+    if board[row][i] <> 0 then
+    begin
+      Result := Result + [board[row][i]];
+    end;
+  end;
+end;
+
+function TFrmSudokuSolver.GetFreePositions(board: TBoard): TPointList;
+var
+  x, y: Integer;
+begin
+  Result := TPointList.Create;
+
+  for x := 1 to 9 do
+    for y := 1 to 9 do
+      if board[x][y] = 0 then
+        Result.Add(Point(x, y));
+
+end;
+
+function TFrmSudokuSolver.GetValidDigits(board: TBoard; x,
+  y: Integer): TAllowedDigits;
+var
+  all, row, col, block: TAllowedDigits;
+  blockNumber: Integer;
+begin
+  row := GetDigitsInRow(board, x);
+  col := GetDigitsInColumn(board, y);
+
+  blockNumber := GetBlock(x, y);
+  block := GetDigitsInBlock(board, blockNumber);
+
+  all := [1,2,3,4,5,6,7,8,9];
+
+  Result := all - (block + row + col);
+end;
+
+function TFrmSudokuSolver.heuristic(board: TBoard;
+  freePositions: TPointList): TPoint;
+var
+  bestResult: Integer;
+  item: TPoint;
+  validDigits: TAllowedDigits;
+  count: Integer;
+
+  function countValidDigits: Integer;
+  var
+    i: Integer;
+  begin
+    Result := 0;
+    for i := 1 to 9 do
+    begin
+      if i in validDigits then
+        inc(Result);
+    end;
+  end;
+begin
+  Result := Point(0, 0);
+  bestResult := 10; // Unreachable bad
+
+  for item in freePositions do
+  begin
+    validDigits := getValidDigits(board, item.X, item.Y);
+    count := countValidDigits;
+
+    if count < bestResult then
+    begin
+      bestResult := count;
+      Result := item;
+
+      if count = 1 then
+        Exit;
+    end;
+  end;
+end;
+
+function TFrmSudokuSolver.ReadBoard: TBoard;
+var
+  x, y: Integer;
+begin
+  for x := 1 to 9 do
+  begin
+    for y := 1 to 9 do
+      begin
+        Result[x][y] := StrToIntDef((FindComponent(Format('Edt%d%d', [x, y])) as TEdit).Text, 0);
+      end;
+  end;
+end;
+
+function TFrmSudokuSolver.SolveBacktrack(board: TBoard;
+  freePositions: TPointList): boolean;
+var
+  item: TPoint;
+  digits: TAllowedDigits;
+  digit: Integer;
+begin
+  if freePositions.Count = 0 then
+  begin
+    WriteBoard(board);
+    Result := true;
+  end
+  else
+  begin
+    // There are free spaces
+    Result := false;
+
+    // Get one and try to solve
+    item := heuristic(board, freePositions);
+    freePositions.Remove(item);
+
+{
+    // Use this if you do not want to use the heuristic
+    item := freePositions[0];
+    freePositions.Delete(0);
+}
+
+    digits := GetValidDigits(board, item.X, item.Y);
+    for digit := 1 to 9 do
+    begin
+      if digit in digits then
+      begin
+        board[item.X, item.Y] := digit;
+
+        Result := SolveBacktrack(board, freePositions);
+        if Result then
+          Exit;
+
+        board[item.X, item.Y] := 0;
+      end;
+    end;
+
+    freePositions.Add(item);
+  end;
+end;
+
+procedure TFrmSudokuSolver.WriteBoard(board: TBoard);
+var
+  x, y: Integer;
+begin
+  for x := 1 to 9 do
+  begin
+    for y := 1 to 9 do
+      begin
+        (FindComponent(Format('Edt%d%d', [x, y])) as TEdit).Text := IntToStr(board[x][y]);
+      end;
+  end;
 end;
 
 end.
