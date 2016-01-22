@@ -2,6 +2,9 @@ unit FormU;
 
 interface
 
+{$DEFINE Sample1}
+{.$DEFINE Sample2}
+
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Math, System.Generics.Collections;
@@ -186,29 +189,49 @@ var
   board: array[1..9] of string[9];
   x, y: Integer;
 {$ENDIF}
-
 begin
 
 {$IFDEF DEBUG}
-  // In Case of Debug, initialize with a sample Sudoku
-  board[1] := '8x945x3x2';
-  board[2] := '35xx7xxxx';
-  board[3] := 'xxxxxxx46';
-  board[4] := 'xxxxxx4x9';
-  board[5] := '5x76148x3';
-  board[6] := '6x8xxxxxx';
-  board[7] := '27xxxxxxx';
-  board[8] := 'xxxx9xx81';
-  board[9] := '9x6x432x7';
+  {$IFDEF Sample1}
+    {$IFDEF Sample2}
+      {$MESSAGE Fatal 'Invalid Sample Selection'}
+    {$ENDIF}
+  {$ENDIF}
 
-  for x := 1 to 9 do
-  begin
-    for y := 1 to 9 do
+  // In Case of Debug, initialize with a sample Sudoku
+  {$IF Defined(Sample1) or Defined(Sample2)}
+    {$IFDEF Sample1}
+      board[1] := '8x945x3x2';
+      board[2] := '35xx7xxxx';
+      board[3] := 'xxxxxxx46';
+      board[4] := 'xxxxxx4x9';
+      board[5] := '5x76148x3';
+      board[6] := '6x8xxxxxx';
+      board[7] := '27xxxxxxx';
+      board[8] := 'xxxx9xx81';
+      board[9] := '9x6x432x7';
+    {$ENDIF}
+    {$IFDEF Sample2}
+      board[1] := 'xxx3x56xx';
+      board[2] := '7x4x29xxx';
+      board[3] := 'xxxxxxxxx';
+      board[4] := '5xx7xxxx8';
+      board[5] := 'x1xxxxxxx';
+      board[6] := '2x3x9xxxx';
+      board[7] := '46xxx2x7x';
+      board[8] := 'xxxxx6x2x';
+      board[9] := 'xx9xxxx3x';
+    {$ENDIF}
+
+    for x := 1 to 9 do
     begin
-      if board[x][y] <> 'x' then
-        (FindComponent('Edt' + IntToStr(x) + IntToStr(y)) as TEdit).Text := board[x][y];
+      for y := 1 to 9 do
+      begin
+        if board[x][y] <> 'x' then
+          (FindComponent('Edt' + IntToStr(x) + IntToStr(y)) as TEdit).Text := board[x][y];
+      end;
     end;
-  end;
+  {$IFEND}
 {$ENDIF}
 end;
 
