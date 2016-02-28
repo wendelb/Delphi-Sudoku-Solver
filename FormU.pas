@@ -133,8 +133,6 @@ procedure TFrmSudokuSolver.BtnStartClick(Sender: TObject);
 var
   board: TBoard;
   freePositions: TPointList;
-  msg: String;
-  item: TPoint;
 begin
   board := ReadBoard;
 
